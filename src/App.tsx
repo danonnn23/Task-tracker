@@ -9,7 +9,7 @@ function App() {
     <Layout>
       <Routes>
         <Route path='/welcome' element={<WelcomePage/>} />
-        <Route path='/login' element={<LoginPage/>} />
+        <Route path='/log-in' element={<LoginPage/>} />
         <Route path='/sign-up' element={<SignUpPage/>}/>
 
         <Route path='*' element={<Navigate to="/welcome" replace />} />

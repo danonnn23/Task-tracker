@@ -1,6 +1,7 @@
 import WelcomeBannerPic from '../assets/WelcomeBannerPic.png'
 import ButtonPrimary from '../components/ButtonPrimary.tsx'
 import ButtonOutline from '../components/ButtonOutline.tsx'
+import { Link } from 'react-router-dom'
 
 const WelcomePage = () => {
     return (
@@ -13,7 +14,9 @@ const WelcomePage = () => {
                 <h4 className='text-[16px] font-medium text-sub-primary-clr h-17.75 w-85 text-center flex justify-center items-center'>Plan, track, and complete your tasks with ease. All your projects in one place.</h4>
             </div>
             <div className='w-full flex flex-col items-center justify-center gap-4.5'>
-                <ButtonPrimary btnText='Sign Up' btnWidth={318} btnHeight={53} btnFontSize={16}/>
+                <Link to='/sign-up'>
+                    <ButtonPrimary btnText='Sign Up' btnWidth={318} btnHeight={53} btnFontSize={16}/>
+                </Link>
                 <ButtonOutline btnText='Log In' btnWidth={318} btnHeight={53} btnFontSize={16}/>
                 <ButtonOutline btnText='Continue with Google' btnIcon='src/assets/GoogleIcon.svg' btnIconSize={35} btnWidth={318} btnHeight={53} btnFontSize={16}/>
             </div>
