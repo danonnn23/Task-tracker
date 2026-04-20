@@ -7,9 +7,10 @@ interface InputProps {
   height: number;
   roundedOption: 'left' | 'both' | 'right' | 'none';
   isPassword?: boolean;
+  maxChars?: number;
 }
 
-const LoginInput = ({placeholder, width, height, roundedOption, isPassword}: InputProps) => {
+const LoginInput = ({placeholder, width, height, roundedOption, isPassword, maxChars}: InputProps) => {
     const roundedClasses = {
         left: 'rounded-l-full',
         right: 'rounded-r-full',
@@ -26,6 +27,7 @@ const LoginInput = ({placeholder, width, height, roundedOption, isPassword}: Inp
                 placeholder={placeholder} 
                 className={`text-[16px] bg-light-gray px-4 outline-none w-full ${roundedClasses[roundedOption]} ring-primary-clr focus:ring-2`}
                 style={{ height: height }} 
+                maxLength={maxChars}
             />
             {isPassword && (
                 <button 
@@ -33,7 +35,7 @@ const LoginInput = ({placeholder, width, height, roundedOption, isPassword}: Inp
                     className='absolute right-4 text-slate-400 hover:text-primary-clr transition-colors' 
                     onClick={() => setIsPasswordVisible(!isPasswordVisible)}
                 >
-                    {isPasswordVisible ? <EyeOff size={20} /> : <Eye size={20} />}
+                    {isPasswordVisible ? <Eye size={20} /> : <EyeOff size={20} />}
                 </button>
             )}
             

@@ -17,7 +17,9 @@ const WelcomePage = () => {
                 <Link to='/sign-up'>
                     <ButtonPrimary btnText='Sign Up' btnWidth={318} btnHeight={53} btnFontSize={16}/>
                 </Link>
-                <ButtonOutline btnText='Log In' btnWidth={318} btnHeight={53} btnFontSize={16}/>
+                <Link to='/log-in'>
+                    <ButtonOutline btnText='Log In' btnWidth={318} btnHeight={53} btnFontSize={16}/>
+                </Link>
                 <ButtonOutline btnText='Continue with Google' btnIcon='src/assets/GoogleIcon.svg' btnIconSize={35} btnWidth={318} btnHeight={53} btnFontSize={16}/>
             </div>
         </div>
